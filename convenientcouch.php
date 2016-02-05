@@ -1,5 +1,5 @@
 <?php
-require_once('lib/sag/Sag.php');	// you may adjust this path
+require_once('lib/sag/src/Sag.php');	// you may adjust this path
 
 /**
  * ConvenientCouch singleton instance.
@@ -260,14 +260,6 @@ class ConvenientCouch {
         return $this->sag->get($url);
     }
 
-    /**
-     * Fetch all documents of type $type
-     * @param mixed $type document type
-     * @return mixed document
-     */
-    public function fetchDocByType($type) {
-        return $this->fetchViewWithKeyMatch('docs_by_type', $type);
-    }
 
     /**
      * Return CouchDB result body in a view $view, whose key matches $lookupVal.
