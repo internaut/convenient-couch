@@ -29,7 +29,7 @@ $result = $cc->fetchViewWithGrouping('my_view', 2);
 
 // more combinations of key matching and grouping can be achieved by using fetchView()
 // here we also set includeDocs=true to later create single result objects from linked documents
-$linkedDocs = $cc->fetchView('linked_docs_view', 'doc1', ConvenientCouch::KEY_LOOKUP_SINGLE, null, true);
+$linkedDocs = $cc->fetchView('linked_docs_view', 'doc1', ConvenientCouch::$KEY_LOOKUP_SINGLE, null, true);
 $resultObject = $cc->composeSingleDocFromLinkedDocs($linkedDocs);
 ```
 
