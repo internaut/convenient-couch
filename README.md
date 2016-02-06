@@ -19,10 +19,14 @@ $result = $cc->fetchViewWithKeyMatch('my_view', 'my_value');
 $result = $cc->fetchViewWithKeysMatch('my_view', array('my_value1', 'my_value2');
 // ...
 
-// query my_view with starkey="my_value1"&endkey="my_value2"
+// query my_view with startkey="my_value1"&endkey="my_value2"
 $result = $cc->fetchViewWithKeyRange('my_view', array('my_value1', 'my_value2');
 // ...
 
+// nested (multidimensional) keys are also possible: query my_view with
+// startkey=["val1","subval1"]&endkey=["val2","subval2"]
+$result = $cc->fetchViewWithKeyRange('my_view', array(array('val1', 'subval1'), array('val2', 'subval2'));
+// ...
 
 // query my_view with "grouping=2"
 $result = $cc->fetchViewWithGrouping('my_view', 2);
